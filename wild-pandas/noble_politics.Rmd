@@ -114,6 +114,15 @@ party_tab.loc['Yes', 'rescuers'] / party_tab.loc['out of', 'rescuers']
 party_tab.loc['Yes', 'bystanders'] / party_tab.loc['out of', 'bystanders']
 ```
 
+Do not worry about the code in the cell below, it just produces a bar plot of the proportions we just calculated.
+
+```{python}
+plt.bar(['rescuers', 'bystanders'], 
+        height= [prop_yes_rescuers*100, prop_yes_bystanders*100], color = ['red', 'blue'])
+plt.ylabel('Probability (%)', **{'fontsize': 13})
+plt.title('Probability of being a member of a political party')
+plt.show()```
+
 That looks like a substantial difference - but could it have come about by chance?
 
 What do we mean by chance here?
